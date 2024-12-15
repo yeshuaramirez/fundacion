@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import logo from "../../src/assets/FDM-logo.svg";
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -11,7 +11,13 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 bg-white border-b md:shadow-lg">
       <div className="2xl:container 2xl:mx-auto lg:px-20 md:px-6 px-4 flex items-center">
-        <div className="text-lg font-bold md:py-0 py-4">FDM</div>
+        <div className="flex items-center justify-center space-x-2">
+          <img
+            src={logo}
+            alt="Logo de Fundación de la Divina Misericordia"
+            className="w-20 h-20"
+          />
+        </div>
 
         {/* Menu items */}
         <ul
@@ -21,7 +27,7 @@ const Navbar = () => {
         >
           <li>
             <a
-              href="#"
+              href="#about"
               className="flex md:inline-flex p-4 items-center hover:bg-gray-50"
               onClick={handleMenuItemClick}
             >
@@ -31,7 +37,10 @@ const Navbar = () => {
           <li className="relative">
             <a
               href="#"
-              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              onClick={(e) => {
+                e.preventDefault();
+                setIsDropdownOpen(!isDropdownOpen);
+              }}
               className="flex justify-between md:inline-flex p-4 items-center hover:bg-gray-50 space-x-2"
             >
               <span>Proyectos</span>
@@ -52,7 +61,7 @@ const Navbar = () => {
             >
               <li>
                 <a
-                  href="#"
+                  href="#cara-a-cara"
                   className="flex px-4 py-3 hover:bg-gray-50"
                   onClick={handleMenuItemClick}
                 >
@@ -61,7 +70,7 @@ const Navbar = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#escuela-deportiva-villa-real"
                   className="flex px-4 py-3 hover:bg-gray-50"
                   onClick={handleMenuItemClick}
                 >
@@ -70,7 +79,7 @@ const Navbar = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#en-tus-manos"
                   className="flex px-4 py-3 hover:bg-gray-50"
                   onClick={handleMenuItemClick}
                 >
@@ -79,7 +88,7 @@ const Navbar = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#zona-verde"
                   className="flex px-4 py-3 hover:bg-gray-50"
                   onClick={handleMenuItemClick}
                 >
@@ -91,7 +100,7 @@ const Navbar = () => {
 
           <li>
             <a
-              href="#"
+              href="#donations"
               className="flex md:inline-flex p-4 items-center hover:bg-gray-50"
               onClick={handleMenuItemClick}
             >
@@ -100,7 +109,7 @@ const Navbar = () => {
           </li>
           <li>
             <a
-              href="#"
+              href="#contact"
               className="flex md:inline-flex p-4 items-center hover:bg-gray-50"
               onClick={handleMenuItemClick}
             >

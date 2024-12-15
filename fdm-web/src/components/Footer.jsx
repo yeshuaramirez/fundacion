@@ -1,9 +1,12 @@
+import logo from "../../src/assets/FDM-logo.svg"
 const Footer = () => {
     return (
       <footer className="bg-gray-100 border-t py-6">
         <div className="container mx-auto px-4 flex flex-col items-center space-y-4">
           {/* Logo */}
-          <div className="text-lg font-bold">Fundación de la Divina Misericordia</div>
+          <div className="flex items-center justify-center space-x-2">
+          <img src={logo} alt="Logo de Fundación de la Divina Misericordia" className="w-20 h-20" />
+        </div>
   
           {/* Íconos de redes sociales */}
           <div className="flex space-x-4">
@@ -42,7 +45,7 @@ const Footer = () => {
               </svg>
             </a>
             <a
-              href="mailto:example@example.com"
+              href="mailto:deladivinamisericordia.cr@gmail.com"
               className="text-gray-600 hover:text-red-500 transition"
               aria-label="Correo"
             >

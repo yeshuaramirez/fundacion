@@ -1,10 +1,11 @@
 import React from "react";
+import JesusFondo from "../photos/JesusFondo.JPG"
 
 const Hero = () => {
   return (
-    <div className="relative h-screen w-full">
+    <div className="relative h-screen w-full text-center">
       <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Divine_Mercy.jpeg/800px-Divine_Mercy.jpeg"
+        src={JesusFondo}
         alt="Background Image"
         className="absolute inset-0 w-full h-full object-cover filter blur-sm"
       />
